@@ -1,0 +1,2 @@
+- left to right design
+- home section will have parallax effect that moves with the mouse
