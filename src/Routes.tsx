@@ -2,6 +2,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
 import AboutSection from "./components/about-section";
 import ContactSection from "./components/contact-section";
+import TechSection from "./components/tech-section";
 import MoreProjectsSection from "./components/more-projects-section";
 import PresentationalSection from "./components/presentational-section";
 import { useEffect } from "react";
@@ -22,7 +23,8 @@ function Routes() {
         <Switch>
           <Route path="/" exact component={PresentationalSection} />
           <Route path="/projects" component={MoreProjectsSection} />
-          <Route path="/tech" component={AboutSection} />
+          <Route path="/tech" component={TechSection} />
+          <Route path="/about" component={AboutSection} />
           <Route path="/contact" component={ContactSection} />
         </Switch>
       </div>
