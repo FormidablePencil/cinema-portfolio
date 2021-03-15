@@ -11,10 +11,10 @@ function Routes() {
       <div className="App">
         <Navbar />
         <Switch>
-          <Route path="/" component={PresentationalSection} />
-          <Route path="/" component={MoreProjectsSection} />
-          <Route path="/" component={AboutSection} />
-          <Route path="/" component={ContactSection} />
+          <Route path="/" exact component={PresentationalSection} />
+          <Route path="/projects" component={MoreProjectsSection} />
+          <Route path="/tech" component={AboutSection} />
+          <Route path="/contact" component={ContactSection} />
         </Switch>
       </div>
     </BrowserRouter>
