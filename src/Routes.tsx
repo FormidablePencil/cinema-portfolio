@@ -1,9 +1,9 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Navbar from "./components/navbar";
-import AboutSection from "./landing/components/about-section";
-import ContactSection from "./landing/components/contact-section";
-import MoreProjectsSection from "./landing/components/more-projects-section";
-import PresentationalSection from "./landing/components/presentational-section";
+import AboutSection from "./components/about-section";
+import ContactSection from "./components/contact-section";
+import MoreProjectsSection from "./components/more-projects-section";
+import PresentationalSection from "./components/presentational-section";
 
 function Routes() {
   return (
