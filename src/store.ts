@@ -1,9 +1,16 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { contentReducer } from "./reducers/contentReducer";
+import { rawCrystalDataReducer } from "./reducers/rawCrystalDataReducer";
 
-const rootReducer = combineReducers({
+export interface AppState {
+  content: any;
+  rawCrystalData: any;
+}
+
+const rootReducer = combineReducers<AppState>({
   content: contentReducer,
+  rawCrystalData: rawCrystalDataReducer,
 });
 
 const initialState = {};

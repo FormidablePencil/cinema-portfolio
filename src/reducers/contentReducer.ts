@@ -1,4 +1,4 @@
-import { FETCHED_CONTENT } from "./types";
+import { FETCHED_CONTENT } from "./constants";
 
 const initialState = [];
 

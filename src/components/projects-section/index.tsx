@@ -1,12 +1,11 @@
-import './index.scoped.sass'
+import { useSelector } from "react-redux";
+import "./index.scoped.sass";
+import { AppState } from "../../store";
 
 function ProjectsSection() {
+  const rawCrystalData = useSelector((state: AppState) => state.rawCrystalData);
 
-  return (
-    <div>
-
-    </div>
-  )
+  return <div />;
 }
 
-export default ProjectsSection
+export default ProjectsSection;

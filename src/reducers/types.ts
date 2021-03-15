@@ -1,1 +1,0 @@
-export const FETCHED_CONTENT = 'FETCHED_CONTENT'
