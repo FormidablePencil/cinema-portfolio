@@ -3,7 +3,7 @@ import Navbar from "./components/navbar";
 import AboutSection from "./components/about-section";
 import ContactSection from "./components/contact-section";
 import TechSection from "./components/tech-section";
-import MoreProjectsSection from "./components/more-projects-section";
+import ProjectsSection from "./components/projects-section";
 import PresentationalSection from "./components/presentational-section";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -22,7 +22,7 @@ function Routes() {
         <Navbar />
         <Switch>
           <Route path="/" exact component={PresentationalSection} />
-          <Route path="/projects" component={MoreProjectsSection} />
+          <Route path="/projects" component={ProjectsSection} />
           <Route path="/tech" component={TechSection} />
           <Route path="/about" component={AboutSection} />
           <Route path="/contact" component={ContactSection} />

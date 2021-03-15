@@ -1,6 +1,6 @@
 import { FETCHED_PARALLAX_CRYSTAL_DATA } from "./constants";
 
-const initialState = [];
+const initialState = null
 
 export const rawCrystalDataReducer = (
   state = initialState,

@@ -4,6 +4,7 @@ import Routes from "./Routes";
 import { Provider } from "react-redux";
 import storeConfig from "./store.ts";
 import { init } from "emailjs-com";
+import { CrystalParallaxProvider } from "parallax-effect-crystals";
 
 function App() {
   const store = storeConfig();
@@ -13,7 +14,9 @@ function App() {
 
   return (
     <Provider store={store}>
-      <Routes />
+      <CrystalParallaxProvider>
+        <Routes />
+      </CrystalParallaxProvider>
     </Provider>
   );
 }
