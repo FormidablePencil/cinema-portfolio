@@ -10,7 +10,7 @@ function ProjectsSection() {
   if (!rawCrystalData) return null;
   else
     return (
-      <div>
+      <div className="container">
         <CrystalParallax
           withGui={false}
           pulledRawCrystalData={rawCrystalData}
