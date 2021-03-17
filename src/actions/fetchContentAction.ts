@@ -1,5 +1,6 @@
 import {
   FETCHED_PARALLAX_CRYSTAL_DATA,
+  FETCHED_PARALLAX_CRYSTAL_DATA_FOR_HOME,
   SAVE_FETCH_CONTENT,
 } from "../reducers/constants";
 
@@ -16,7 +17,7 @@ const fetchContentAction = () => async (dispatch) => {
     payloadFetch
   );
   interface contentDataT {
-    data: { cmsPortfolioContent; rawCrystalData };
+    data: { cmsPortfolioContent; rawCrystalData; rawCrystalDataForHome };
   }
   const contentData: contentDataT = await resContentData.json(); //update content state
   console.log(contentData);
@@ -29,6 +30,10 @@ const fetchContentAction = () => async (dispatch) => {
     dispatch({
       type: FETCHED_PARALLAX_CRYSTAL_DATA,
       payload: contentData.data.rawCrystalData,
+    });
+    dispatch({
+      type: FETCHED_PARALLAX_CRYSTAL_DATA_FOR_HOME,
+      payload: contentData.data.rawCrystalDataForHome,
     });
   }
 };

@@ -1,6 +1,6 @@
 import { FETCHED_PARALLAX_CRYSTAL_DATA } from "./constants";
 
-const initialState = null
+const initialState = null;
 
 export const rawCrystalDataReducer = (
   state = initialState,
@@ -8,7 +8,6 @@ export const rawCrystalDataReducer = (
 ) => {
   switch (type) {
     case FETCHED_PARALLAX_CRYSTAL_DATA:
-      console.log(payload);
       return payload;
     default:
       return state;

@@ -1,4 +1,5 @@
 @use './styles/utilities'
+
 $snavbarHeight: 30em
 
 h1, h2, h3, h4, p, body
@@ -7,8 +8,11 @@ h1, h2, h3, h4, p, body
 ul
   list-style-type: none
 
+.compensate-for-navbar
+  height: utilities.$navbarHeight
+
 .App
+  height: 100vh
   display: flex
-  height: utilities.$fullHeightWithNavbarCompensation
   width: 100vw
   flex-direction: column
