@@ -26,12 +26,6 @@ function Navbar() {
           Projects
         </li>
         <li
-          onClick={() => navigateTo("/tech")}
-          className={`nav-item ${isTech}`}
-        >
-          Tech
-        </li>
-        <li
           onClick={() => navigateTo("/contact")}
           className={`nav-item ${isContact}`}
         >
