@@ -18,23 +18,23 @@ function VidsTab() {
 
   return (
     <div className="container">
-      <iframe
-        className="video"
-        width="900"
-        height="500"
-        src="https://www.youtube.com/embed/lve6KTZTKDw"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      />
       {videoProjects.map((props) => (
         <div className="item-container">
-          <video className="video" width="900" height="500" controls>
-            <source src={props.url} type="video/mp4" />
-          </video>
+          <iframe
+            className="video"
+            width="900"
+            height="500"
+            src="https://www.youtube.com/embed/lve6KTZTKDw"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          />
           <InfoSection title={props.title} description={props.description} />
         </div>
       ))}
+      <video className="video" width="900" height="500" controls>
+        <source src="https://adobeprod-a.akamaihd.net/K6_ocwJGHrK/rend/K6_ocwJGHrK_576.mp4?hdnea=st%3D1616186173%7Eexp%3D1616445373%7Eacl%3D%2Fshared_assets%2Fimage%2F*%21%2Fz%2FK6_ocwJGHrK%2Frend%2F*%21%2Fi%2FK6_ocwJGHrK%2Frend%2F*%21%2FK6_ocwJGHrK%2Frend%2F*%21%2FK6_ocwJGHrK%2Fimage%2F*%7Ehmac%3D38acf34a4c406d04456a9e567567ca4f9b53563818f2b5d84d0456c1ae04a27d" type="video/mp4" />
+      </video>
     </div>
   );
 }
