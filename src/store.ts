@@ -4,15 +4,16 @@ import { contentReducer } from "./reducers/contentReducer";
 import { rawCrystalDataReducer } from "./reducers/rawCrystalDataReducer";
 import { rawCrystalDataForHomeReducer } from "./reducers/rawCrystalDataForHomeReducer";
 import { portfolioContentReducer } from "./reducers/portfolioContentReducer";
+import { crystalParallaxT } from "parallax-effect-crystals";
 
 export interface AppState {
   content: any;
-  rawCrystalData: any;
   portfolioContent: any;
-  rawCrystalDataForHome: any;
+  rawCrystalData: crystalParallaxT;
+  rawCrystalDataForHome: crystalParallaxT;
 }
 
-const rootReducer = combineReducers<AppState>({
+const rootReducer = combineReducers({
   content: contentReducer,
   rawCrystalData: rawCrystalDataReducer,
   rawCrystalDataForHome: rawCrystalDataForHomeReducer,

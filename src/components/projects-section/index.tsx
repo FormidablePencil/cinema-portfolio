@@ -1,27 +1,33 @@
-import { CrystalParallax, CrystalParallaxProvider } from "parallax-effect-crystals";
-import { useSelector } from "react-redux";
-import { AppState } from "../../store";
+import { useState } from "react";
 import "./index.scoped.sass";
+import ParallaxTab from "./tabs/parallax-tab";
+import TabNavbar from "./tabs/tab-navbar";
+import ImagesTab from "./tabs/tab-navbar/images-tab";
+import VidsTab from "./tabs/vids-tab";
+
+export enum tabSection {
+  parallax,
+  images,
+  vids,
+}
 
 function ProjectsSection() {
-  const rawCrystalData = useSelector((state: AppState) => state.rawCrystalData);
+  const [tabToggled, setTabToggled] = useState(tabSection.parallax);
 
-  const crystalClickedOn = (crytalUUID) =>
-    console.log(crytalUUID, "crytalUUID");
+  const navItemClicked = (selected) => setTabToggled(selected);
 
-  console.log(rawCrystalData, "kk");
-  if (!rawCrystalData) return null;
-  else
-    return (
-      <div className="container">
-        <CrystalParallaxProvider
-          crystalClickedOn={crystalClickedOn}
-          eventToFollow="scroll"
-        >
-          <CrystalParallax pulledRawCrystalData={rawCrystalData} />
-        </CrystalParallaxProvider>
-      </div>
-    );
+  return (
+    <div className="container">
+      <TabNavbar navItemClicked={navItemClicked} />
+      {tabToggled === tabSection.parallax ? (
+        <ParallaxTab />
+      ) : tabToggled === tabSection.images ? (
+        <ImagesTab />
+      ) : (
+        tabToggled === tabSection.vids && <VidsTab />
+      )}
+    </div>
+  );
 }
 
 export default ProjectsSection;

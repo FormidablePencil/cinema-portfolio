@@ -1,6 +1,6 @@
 import './index.scoped.sass'
 
-function MoreProjectsSection() {
+function VidsTab() {
 
   return (
     <div>
@@ -9,4 +9,4 @@ function MoreProjectsSection() {
   )
 }
 
-export default MoreProjectsSection
+export default VidsTab
