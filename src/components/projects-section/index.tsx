@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./index.scoped.sass";
 import ParallaxTab from "./tabs/parallax-tab";
 import TabNavbar from "./tabs/tab-navbar";
-import ImagesTab from "./tabs/tab-navbar/images-tab";
+import ImagesTab from "./tabs/images-tab";
 import VidsTab from "./tabs/vids-tab";
 
 export enum tabSection {
