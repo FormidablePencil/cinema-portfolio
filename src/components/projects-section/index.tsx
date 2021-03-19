@@ -18,7 +18,7 @@ function ProjectsSection() {
 
   return (
     <div className="container">
-      <TabNavbar navItemClicked={navItemClicked} />
+      <TabNavbar tabToggled={tabToggled} navItemClicked={navItemClicked} />
       {tabToggled === tabSection.parallax ? (
         <ParallaxTab />
       ) : tabToggled === tabSection.images ? (

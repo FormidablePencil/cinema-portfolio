@@ -1,13 +1,22 @@
-import {tabSection} from "../..";
+import { tabSection } from "../..";
 import "./index.scoped.sass";
 
-function TabNavbar({ navItemClicked }) {
+function TabNavbar({ navItemClicked, tabToggled }) {
+  const NavItem = ({ tabSectionItem, label }) => (
+    <li
+      className={tabToggled === tabSectionItem && "active"}
+      onClick={() => navItemClicked(tabSectionItem)}
+    >
+      {label}
+    </li>
+  );
+
   return (
     <div className="container">
       <ul>
-        <li onClick={() => navItemClicked(tabSection.parallax)}>Parallax</li>
-        <li onClick={() => navItemClicked(tabSection.images)}>Images</li>
-        <li onClick={() => navItemClicked(tabSection.vids)}>Videos</li>
+        <NavItem tabSectionItem={tabSection.parallax} label="parallax" />
+        <NavItem tabSectionItem={tabSection.images} label="Images" />
+        <NavItem tabSectionItem={tabSection.vids} label="Videos" />
       </ul>
     </div>
   );
