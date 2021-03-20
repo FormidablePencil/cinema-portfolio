@@ -17,7 +17,7 @@ function VidsTab() {
   };
 
   return (
-    <div className="container">
+    <div className="container padding-to-avoid-navbar">
       {videoProjects.map((props) => (
         <div className="item-container">
           <iframe

@@ -1,7 +1,5 @@
 @use './styles/utilities'
 
-$snavbarHeight: 30em
-
 h1, h2, h3, h4, p, body
   color: white
   font-family: Montserrat-Regular
@@ -10,6 +8,9 @@ h1
 
 ul
   list-style-type: none
+
+.padding-to-avoid-navbar
+  padding-top: utilities.$navbarHeight * 2
 
 .compensate-for-navbar
   height: utilities.$navbarHeight
