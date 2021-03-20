@@ -1,6 +1,7 @@
 import { FETCHED_PARALLAX_CRYSTAL_DATA } from "./constants";
+import { crystalParallaxDefault } from "parallax-effect-crystals";
 
-const initialState = null;
+const initialState = crystalParallaxDefault;
 
 export const rawCrystalDataReducer = (
   state = initialState,
