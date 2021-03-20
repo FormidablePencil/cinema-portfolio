@@ -6,9 +6,8 @@ function Navbar() {
   const history = useHistory();
 
   const isHome = pathname === "/" && "active";
-  const isProject = pathname === "/projects" && "active";
-  const isTech = pathname === "/tech" && "active";
   const isContact = pathname === "/contact" && "active";
+  const isProject = pathname !== "/" && pathname !== "/contact" && "active";
 
   const navigateTo = (navTo: string) => history.push(navTo);
 
@@ -20,7 +19,7 @@ function Navbar() {
           Home
         </li>
         <li
-          onClick={() => navigateTo("/projects")}
+          onClick={() => navigateTo("/projects/parallax")}
           className={`nav-item ${isProject}`}
         >
           Projects

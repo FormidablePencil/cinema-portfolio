@@ -1,11 +1,16 @@
-import { tabSection } from "../..";
 import "./index.scoped.sass";
+import { useHistory, useLocation } from "react-router";
 
-function TabNavbar({ navItemClicked, tabToggled }) {
-  const NavItem = ({ tabSectionItem, label }) => (
+function TabNavbar() {
+  const { pathname } = useLocation();
+  const history = useHistory();
+
+  const navigateTo = (path) => history.push(path);
+
+  const NavItem = ({ path, label }) => (
     <li
-      className={tabToggled === tabSectionItem && "active"}
-      onClick={() => navItemClicked(tabSectionItem)}
+      className={pathname === path && "active"}
+      onClick={() => navigateTo(path)}
     >
       {label}
     </li>
@@ -14,9 +19,9 @@ function TabNavbar({ navItemClicked, tabToggled }) {
   return (
     <div className="container">
       <ul>
-        <NavItem tabSectionItem={tabSection.parallax} label="parallax" />
-        <NavItem tabSectionItem={tabSection.images} label="Images" />
-        <NavItem tabSectionItem={tabSection.vids} label="Videos" />
+        <NavItem path="/projects/parallax" label="Parallax" />
+        <NavItem path="/projects/images" label="Images" />
+        <NavItem path="/projects/videos" label="Videos" />
       </ul>
     </div>
   );
