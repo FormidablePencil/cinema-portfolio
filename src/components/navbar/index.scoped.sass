@@ -1,8 +1,5 @@
 @use '../../styles/utilities'
 
-h1
-  margin: 0
-
 .nav-item
   text-decoration: none
   color: utilities.$fontColor
@@ -18,16 +15,43 @@ h1
    padding: 0 4em 0 4em
    border: solid utilities.$secondaryColor 0
    border-bottom-width: .2em
+   @media (max-width: utilities.$smallScreen)
+    height: auto
+    align-items: flex-start
+    justify-content: flex-end
+    border: none
+    padding: 0
+    margin: 0
 
+    h1
+      margin: 0
+      @media (max-width: utilities.$smallScreen)
+        display: none
 
 ul
   display: flex
   flex-direction: row
   justify-content: center
+  margin: 0
+  padding: 0
+  @media (max-width: utilities.$smallScreen)
+    position: absolute
+    z-index: 1
+    width: 100%
+    top: 0
+    padding-top: utilities.$iconSize + 12px
+    flex-direction: column
+    background-color: rgba(51, 55, 63, .3)
 
   li
     cursor: pointer
     padding: 1.5em 3em 1.5em 3em
+    &:last-child
+      padding-right: 1em
+    @media (max-width: utilities.$smallScreen)
+      padding: 1em
+      border: solid utilities.$secondaryColor 0
+      border-bottom-width: .2em
+      &:first-child
+        padding-top: 0       
 
-  li:last-child
-    padding-right: 1em
