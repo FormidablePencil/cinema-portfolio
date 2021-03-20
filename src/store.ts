@@ -4,7 +4,7 @@ import { rawCrystalDataReducer } from "./reducers/rawCrystalDataReducer";
 import { rawCrystalDataForHomeReducer } from "./reducers/rawCrystalDataForHomeReducer";
 import { portfolioContentReducer } from "./reducers/portfolioContentReducer";
 import { crystalParallaxT } from "parallax-effect-crystals";
-import { portfolioContentT } from "cinema-portfolio-proj-types";
+import portfolioContentT from "cinema-portfolio-proj-types";
 
 export interface AppState {
   portfolioContent: portfolioContentT;

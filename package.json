@@ -13,6 +13,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "cinema-portfolio-proj-types": "https://github.com/FormidablePencil/cinema-portfolio-proj-types.git",
     "emailjs-com": "^2.6.4",
     "parallax-effect-crystals": "https://github.com/FormidablePencil/parallax-effect-crystals.git",
     "react": "^17.0.1",
