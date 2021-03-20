@@ -1,6 +1,6 @@
 import {
-    CrystalParallax,
-    CrystalParallaxProvider
+  CrystalParallax,
+  CrystalParallaxProvider,
 } from "parallax-effect-crystals";
 import { useSelector } from "react-redux";
 import { AppState } from "../../store";

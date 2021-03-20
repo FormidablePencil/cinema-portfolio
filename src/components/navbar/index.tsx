@@ -15,26 +15,31 @@ function Navbar() {
   const navigateTo = (navTo: string) => history.push(navTo);
 
   return (
-    <div className="container">
-      <NavbarToggleBtn navbarOpen={navbarOpen} setNavbarOpen={setNavbarOpen} />
-      <h1>Cinematographer</h1>
-      <ul>
-        <li onClick={() => navigateTo("/")} className={`nav-item ${isHome}`}>
-          Home
-        </li>
-        <li
-          onClick={() => navigateTo("/projects/parallax")}
-          className={`nav-item ${isProject}`}
-        >
-          Projects
-        </li>
-        <li
-          onClick={() => navigateTo("/contact")}
-          className={`nav-item ${isContact}`}
-        >
-          Contact
-        </li>
-      </ul>
+    <div className="absolute-container">
+      <div className="container">
+        <NavbarToggleBtn
+          navbarOpen={navbarOpen}
+          setNavbarOpen={setNavbarOpen}
+        />
+        <h1>Cinematographer</h1>
+        <ul>
+          <li onClick={() => navigateTo("/")} className={`nav-item ${isHome}`}>
+            Home
+          </li>
+          <li
+            onClick={() => navigateTo("/projects/parallax")}
+            className={`nav-item ${isProject}`}
+          >
+            Projects
+          </li>
+          <li
+            onClick={() => navigateTo("/contact")}
+            className={`nav-item ${isContact}`}
+          >
+            Contact
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
