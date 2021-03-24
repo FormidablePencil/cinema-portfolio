@@ -27,7 +27,7 @@ function Routes() {
     <div className="App">
       <Navbar />
       <PoseGroup>
-        <RoutesContainer key={location.key}>
+        <RoutesContainer key={location.pathname}>
           <Switch location={location}>
             <Route path="/" exact component={HomeSection} />
             <Route path="/projects" component={ProjectsSection} />
