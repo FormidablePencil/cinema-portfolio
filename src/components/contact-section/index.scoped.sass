@@ -1,9 +1,11 @@
-$inputColor: #8591A5
+@use '../../styles/utilities'
+
+$inputColor: #A9BAD3
 
 img
   width: 50vw
-.contact-container
-  flex: 1
+  @media (max-width: utilities.$smallScreen)
+    display: none
 
 .container
   height: 100vh
