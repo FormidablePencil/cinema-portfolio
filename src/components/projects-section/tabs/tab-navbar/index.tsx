@@ -1,29 +1,36 @@
 import "./index.scoped.sass";
 import { useHistory, useLocation } from "react-router";
 
-function TabNavbar() {
+function TabNavbar({
+  onPressItem,
+  inMainNavbar,
+}: {
+  onPressItem?: () => any;
+  inMainNavbar?;
+}) {
   const { pathname } = useLocation();
   const history = useHistory();
 
-  const navigateTo = (path) => history.push(path);
+  const navigateTo = (path) => {
+    if (onPressItem) onPressItem();
+    history.push(path);
+  };
 
   const NavItem = ({ path, label }) => (
     <li
       className={pathname === path && "active"}
-      onClick={() => navigateTo(path)}
+      onClickCapture={() => navigateTo(path)}
     >
       {label}
     </li>
   );
 
   return (
-    <div className="container">
-      <ul>
-        <NavItem path="/projects/parallax" label="Parallax" />
-        <NavItem path="/projects/images" label="Images" />
-        <NavItem path="/projects/videos" label="Videos" />
-      </ul>
-    </div>
+    <ul className={`${inMainNavbar ? "in-main-navbar" : "container"}`}>
+      <NavItem path="/projects/parallax" label="Parallax" />
+      <NavItem path="/projects/images" label="Images" />
+      <NavItem path="/projects/videos" label="Videos" />
+    </ul>
   );
 }
 

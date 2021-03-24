@@ -8,9 +8,9 @@ function NavbarToggleBtn({ navbarOpen, setNavbarOpen }) {
   return (
     <div className="container" onClick={toggleNavbar}>
       {navbarOpen ? (
-        <FiMenu className="icon" />
-      ) : (
         <RiCloseFill className="icon" />
+      ) : (
+        <FiMenu className="icon" />
       )}
     </div>
   );

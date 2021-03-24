@@ -4,9 +4,22 @@
   position: absolute
   z-index: 1
   top: utilities.$navbarHeight + .5em
-  right: 0
   display: flex
   justify-content: flex-end
+  right: 0
+  @media (max-width: utilities.$smallScreen)
+    display: none
+
+.in-main-navbar
+  z-index: 23
+  margin-top: .5em
+  margin-left: 1em
+  height: 8em
+  flex-direction: column
+  li
+    justify-content: flex-start
+  @media (min-width: utilities.$smallScreen)
+    display: none
 
 ul
   display: flex

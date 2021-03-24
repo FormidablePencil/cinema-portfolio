@@ -1,5 +1,30 @@
 @use '../../styles/utilities'
 
+.hide-on-small
+ @media (max-width: utilities.$smallScreen)
+  display: none
+.hide-on-large
+ @media (min-width: utilities.$smallScreen)
+  display: none
+
+.dropdown-icon
+  margin: -10px 5px -6px 5px
+  transform: rotateX(0deg)
+  transition: transform 1s
+  &-rotate
+    transform: rotateX(180deg)
+    transition: transform 1s 
+    @extend .dropdown-icon
+
+.closed-projects
+  overflow: hidden
+  height: 20px
+  transition: height 1s
+.open-projects
+  overflow: hidden
+  height: 150px
+  transition: height 1s
+
 .nav-item
   text-decoration: none
   color: utilities.$fontColor
@@ -42,6 +67,8 @@ ul
   margin: 0
   padding: 0
   @media (max-width: utilities.$smallScreen)
+    transform: translateY(-350px)
+    transition: transform 1s 500ms
     position: absolute
     z-index: 1
     width: 100%
@@ -62,3 +89,6 @@ ul
       &:first-child
         padding-top: 0       
 
+  &.active
+    transform: translateY(0px)
+    transition: transform 1s
