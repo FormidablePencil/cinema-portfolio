@@ -1,12 +1,43 @@
+$inputColor: #8591A5
+
+img
+  width: 50vw
+.contact-container
+  flex: 1
+
 .container
+  height: 100vh
   flex: 1
   display: flex
-  justify-content: space-around
   align-items: center
+  justify-content: center
 
-.contact-form
+.form-container
+  flex: 1
   display: flex
-  flex-direction: column
+  justify-content: center
+
+  .contact-form
+    display: flex
+    width: 20em
+    flex-direction: column
+
+    label
+      margin: .5em 0
+    input
+      background: $inputColor
+      border: 0px
+      border-radius: 1em
+      outline: none
+      height: 2em
+    textarea
+      background: $inputColor
+    .submit
+      background-color: #4E5561
+      color: white
+      margin: 1.5em 0
+      height: 2.5em
+    
 
 .optional
   color: grey
