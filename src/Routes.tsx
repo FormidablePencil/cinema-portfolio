@@ -7,6 +7,7 @@ import HomeSection from "./components/home-section";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import fetchContentAction from "./actions/fetchContentAction";
+import posed, { PoseGroup } from "react-pose";
 
 function Routes() {
   const dispatch = useDispatch();
@@ -15,17 +16,30 @@ function Routes() {
     dispatch(fetchContentAction());
   }, [dispatch]);
 
+  const RoutesContainer = posed.div({
+    enter: { opacity: 1, delay: 400 },
+    exit: { opacity: 0 },
+  });
+
   return (
     <BrowserRouter>
-      <div className="App">
-        <Navbar />
-        <Switch>
-          <Route path="/" exact component={HomeSection} />
-          <Route path="/projects" component={ProjectsSection} />
-          <Route path="/about" component={AboutSection} />
-          <Route path="/contact" component={ContactSection} />
-        </Switch>
-      </div>
+      <Route
+        render={({ location }) => (
+          <div className="App">
+            <Navbar />
+            <PoseGroup>
+              <RoutesContainer key={location.key}>
+                <Switch location={location}>
+                  <Route path="/" exact component={HomeSection} />
+                  <Route path="/projects" component={ProjectsSection} />
+                  <Route path="/about" component={AboutSection} />
+                  <Route path="/contact" component={ContactSection} />
+                </Switch>
+              </RoutesContainer>
+            </PoseGroup>
+          </div>
+        )}
+      />
     </BrowserRouter>
   );
 }
