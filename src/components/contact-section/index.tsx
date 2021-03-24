@@ -1,5 +1,7 @@
 import "./index.scoped.sass";
 import emailjs from "emailjs-com";
+import abstractImg from "../../assets/images/abstractImg.png";
+import { CSSTransition } from "react-transition-group";
 
 function ContactSection() {
   function sendEmail(e) {
@@ -17,7 +19,7 @@ function ContactSection() {
 
   return (
     <div className="container">
-      <h1>some art here</h1>
+      <img src={abstractImg} alt="abstract" />
 
       <form className="contact-form" onSubmit={sendEmail}>
         {/* <input type="hidden" name="contact_number" /> */}

@@ -12,6 +12,7 @@ import posed, { PoseGroup } from "react-pose";
 function Routes() {
   const dispatch = useDispatch();
   const location = useLocation();
+  // const location = { key: "/projects" };
 
   useEffect(() => {
     dispatch(fetchContentAction());
