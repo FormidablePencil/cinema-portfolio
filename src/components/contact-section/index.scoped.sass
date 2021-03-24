@@ -27,6 +27,7 @@ img
     label
       margin: .5em 0
     input
+      padding-left: 1em
       background: $inputColor
       border: 0px
       border-radius: 1em
@@ -34,12 +35,17 @@ img
       height: 2em
     textarea
       background: $inputColor
+
     .submit
+      padding-left: 0
       background-color: #4E5561
       color: white
       margin: 1.5em 0
       height: 2.5em
-    
+      &:hover
+        background: #515965
+      &:active
+        background: #333840
 
 .optional
   color: grey
