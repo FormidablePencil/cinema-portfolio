@@ -1,5 +1,4 @@
 import "./index.scoped.sass";
-import Navbar from "../navbar";
 import ShowcaseHotImages from "./showcase-hot-images";
 
 function HomeSection() {
@@ -14,7 +13,6 @@ function HomeSection() {
         {/* <ImagePaginator /> */}
         {/* <PaginationIndicator/> */}
       </div>
-      <div className="compensate-for-navbar" />
     </div>
   );
 }

@@ -1,9 +1,23 @@
 @use '../../../../styles/utilities'
 
+$height: 2em
+$bgColor: #16171A 
+
+.angle
+  position: absolute
+  left: -2.5em
+  width: 2.5em
+  z-index: 10
+  height: $height
+  background: $bgColor
+  overflow: hidden
+  border-radius: 0% 0% 0% 100%
+
 .container
+  background: #16171A
   position: absolute
   z-index: 1
-  top: utilities.$navbarHeight + .5em
+  top: utilities.$navbarHeight + .2em
   display: flex
   justify-content: flex-end
   right: 0
@@ -26,7 +40,7 @@ ul
   padding: 0
   margin: 0
   width: 25em
-  height: 2em
+  height: $height
 
   li
     cursor: pointer

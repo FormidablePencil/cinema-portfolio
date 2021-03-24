@@ -27,6 +27,7 @@ function TabNavbar({
 
   return (
     <ul className={`${inMainNavbar ? "in-main-navbar" : "container"}`}>
+      <div className="angle" />
       <NavItem path="/projects/parallax" label="Parallax" />
       <NavItem path="/projects/images" label="Images" />
       <NavItem path="/projects/videos" label="Videos" />
