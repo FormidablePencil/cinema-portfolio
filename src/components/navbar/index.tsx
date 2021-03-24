@@ -28,6 +28,7 @@ function Navbar() {
   return (
     <div className="absolute-container">
       <div className="container">
+        {isProject && <TabNavbar />}
         <NavbarToggleBtn
           navbarOpen={navbarOpen}
           setNavbarOpen={setNavbarOpen}

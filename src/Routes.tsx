@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/navbar";
 import AboutSection from "./components/about-section";
 import ContactSection from "./components/contact-section";
@@ -11,6 +11,7 @@ import posed, { PoseGroup } from "react-pose";
 
 function Routes() {
   const dispatch = useDispatch();
+  const location = useLocation();
 
   useEffect(() => {
     dispatch(fetchContentAction());
@@ -22,25 +23,19 @@ function Routes() {
   });
 
   return (
-    <BrowserRouter>
-      <Route
-        render={({ location }) => (
-          <div className="App">
-            <Navbar />
-            <PoseGroup>
-              <RoutesContainer key={location.key}>
-                <Switch location={location}>
-                  <Route path="/" exact component={HomeSection} />
-                  <Route path="/projects" component={ProjectsSection} />
-                  <Route path="/about" component={AboutSection} />
-                  <Route path="/contact" component={ContactSection} />
-                </Switch>
-              </RoutesContainer>
-            </PoseGroup>
-          </div>
-        )}
-      />
-    </BrowserRouter>
+    <div className="App">
+      <Navbar />
+      <PoseGroup>
+        <RoutesContainer key={location.key}>
+          <Switch location={location}>
+            <Route path="/" exact component={HomeSection} />
+            <Route path="/projects" component={ProjectsSection} />
+            <Route path="/about" component={AboutSection} />
+            <Route path="/contact" component={ContactSection} />
+          </Switch>
+        </RoutesContainer>
+      </PoseGroup>
+    </div>
   );
 }
 
