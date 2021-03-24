@@ -13,7 +13,7 @@ const fetchContentAction = () => async (dispatch) => {
   };
 
   const resContentData = await fetch(
-    "https://jordan-portfolio-server.herokuapp.com/getcontentdata",
+    `${process.env.REACT_APP_FETCH_USERS_CONTENT_URL}`,
     payloadFetch
   );
   interface contentDataT {
