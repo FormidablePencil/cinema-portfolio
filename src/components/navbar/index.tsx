@@ -34,7 +34,7 @@ function Navbar() {
             navbarOpen={navbarOpen}
             setNavbarOpen={setNavbarOpen}
           />
-          <h1>Cinematographer</h1>
+          <h1>Jordan Sheets</h1>
           <ul className={navbarOpen ? "active" : ""}>
             <li
               onClick={() => navigateTo("/")}
