@@ -18,7 +18,7 @@ function TabNavbar({
 
   const NavItem = ({ path, label }) => (
     <li
-      className={pathname === path && "active"}
+      className={pathname === path ? "active" : ""}
       onClickCapture={() => navigateTo(path)}
     >
       {label}

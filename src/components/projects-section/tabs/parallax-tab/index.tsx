@@ -12,7 +12,6 @@ function ParallaxTab() {
   const crystalClickedOn = (crytalUUID) =>
     console.log(crytalUUID, "crytalUUID");
 
-  console.log(rawCrystalData, "kk");
   if (!rawCrystalData) return null;
   else
     return (

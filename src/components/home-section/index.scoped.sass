@@ -1,3 +1,4 @@
+@use '../../styles/utilities'
 
 .container
   flex: 1
@@ -8,18 +9,36 @@
 .row
   @extend .container
   flex-direction: row
+  justify-content: center
+  align-items: center
 
 .text-section
+  margin-top: -3em
   position: absolute
-  z-index: -1
+  z-index: 1
   top: 0
   display: flex
   flex-direction: column
   justify-content: center
   width: 50vw
   height: 100vh
+  left: 5em
+  @media (max-width: utilities.$smallScreen)
+    left: -.8em
+    position: relative
+    width: auto
 
   h1
     font-size: 4em
+    width: 5em
+    margin-bottom: .30em
+    @media (max-width: 550px)
+      margin-left: .9em
+      font-size: 2.2em
   p
     color: #D79C75
+    margin-left: 2em
+    max-width: 30em
+
+button
+  @extend .primaryBtn

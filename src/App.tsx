@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import "./App.sass";
 import Routes from "./Routes";
 import { Provider } from "react-redux";
-import storeConfig from "./store.ts";
+import storeConfig from "./store";
 import { init } from "emailjs-com";
 import "parallax-effect-crystals/dist/index.css";
 

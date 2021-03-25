@@ -9,8 +9,8 @@ function ImagesTab() {
   return (
     <div className="container padding-to-avoid-navbar">
       {rawCrystalData.crystals.map((props) => (
-        <Tooltip arrow title="Description: Dolor quibusdam fuga voluptatum quod perspiciatis temporibus voluptates quidem a ullam Nihil corrupti deleniti assumenda recusandae officia reiciendis? Dolores eligendi cumque esse dolorem optio cumque Laudantium id sint adipisci soluta">
-          <img key={props.key} src={props.crystalProps.imageProps.image} />
+        <Tooltip key={props.key} arrow title="Description: Dolor quibusdam fuga voluptatum quod perspiciatis temporibus voluptates quidem a ullam Nihil corrupti deleniti assumenda recusandae officia reiciendis? Dolores eligendi cumque esse dolorem optio cumque Laudantium id sint adipisci soluta">
+          <img key={props.key} src={props.crystalProps.imageProps.image} alt={props.alt ?? ''} />
         </Tooltip>
       ))}
     </div>

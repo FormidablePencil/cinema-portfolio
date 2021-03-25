@@ -20,7 +20,6 @@ const fetchContentAction = () => async (dispatch) => {
     data: { cmsPortfolioContent; rawCrystalData; rawCrystalDataForHome };
   }
   const contentData: contentDataT = await resContentData.json(); //update content state
-  console.log(contentData);
 
   if (resContentData.status === 200) {
     dispatch({

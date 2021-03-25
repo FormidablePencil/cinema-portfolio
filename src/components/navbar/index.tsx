@@ -34,7 +34,7 @@ function Navbar() {
           setNavbarOpen={setNavbarOpen}
         />
         <h1>Cinematographer</h1>
-        <ul className={navbarOpen && "active"}>
+        <ul className={navbarOpen ? "active" : ""}>
           <li onClick={() => navigateTo("/")} className={`nav-item ${isHome}`}>
             Home
           </li>
