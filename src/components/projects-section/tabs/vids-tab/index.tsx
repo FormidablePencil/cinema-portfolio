@@ -19,7 +19,7 @@ function VidsTab() {
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
-          <InfoSection title={props.title} description={props.description} />
+          <InfoSection title={props.alt} description={props.description} />
         </div>
       ))}
       {/* <video className="video" width="900" height="500" controls> */}
@@ -36,7 +36,11 @@ const InfoSection = ({ title, description }) => {
   return (
     <div className="info-section">
       <h2>{title}</h2>
-      <p className="description">Amet porro quo eaque molestiae tempore? Facilis excepturi ullam eveniet nemo error nulla Eum unde magni tempore eum error, quasi Fuga ipsam beatae placeat explicabo quasi voluptates porro! Accusamus corrupti?</p>
+      <p className="description">
+        Amet porro quo eaque molestiae tempore? Facilis excepturi ullam eveniet
+        nemo error nulla Eum unde magni tempore eum error, quasi Fuga ipsam
+        beatae placeat explicabo quasi voluptates porro! Accusamus corrupti?
+      </p>
     </div>
   );
 };
