@@ -11,15 +11,12 @@ function ShowcaseHotImages() {
     (state: AppState) => state.rawCrystalDataForHome
   );
 
-  const crystalClickedOn = (crytalUUID) =>
-    console.log(crytalUUID, "crytalUUID");
-
   if (!rawCrystalDataForHome) return null;
   else
     return (
       <div className="container">
         <CrystalParallaxProvider
-          crystalClickedOn={crystalClickedOn}
+          // crystalClickedOn={crystalClickedOn}
           eventToFollow="mouse"
         >
           <CrystalParallax pulledRawCrystalData={rawCrystalDataForHome} />

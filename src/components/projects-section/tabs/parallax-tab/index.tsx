@@ -9,14 +9,10 @@ import "./index.scoped.sass";
 function ParallaxTab() {
   const rawCrystalData = useSelector((state: AppState) => state.rawCrystalData);
 
-  const crystalClickedOn = (crytalUUID) =>
-    console.log(crytalUUID, "crytalUUID");
-
   if (!rawCrystalData) return null;
   else
     return (
       <CrystalParallaxProvider
-        crystalClickedOn={crystalClickedOn}
         eventToFollow="scroll"
       >
         <CrystalParallax pulledRawCrystalData={rawCrystalData} />
