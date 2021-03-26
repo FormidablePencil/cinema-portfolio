@@ -14,9 +14,7 @@ function VidsTab() {
           <iframe
             title={props.title}
             className="video"
-            width="900"
-            height="500"
-            src="https://www.youtube.com/embed/lve6KTZTKDw"
+            src={props.url}
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
@@ -38,7 +36,7 @@ const InfoSection = ({ title, description }) => {
   return (
     <div className="info-section">
       <h2>{title}</h2>
-      <p className="description">{description}</p>
+      <p className="description">Amet porro quo eaque molestiae tempore? Facilis excepturi ullam eveniet nemo error nulla Eum unde magni tempore eum error, quasi Fuga ipsam beatae placeat explicabo quasi voluptates porro! Accusamus corrupti?</p>
     </div>
   );
 };
